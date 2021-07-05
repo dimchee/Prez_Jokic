@@ -16,7 +16,6 @@
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{graphicx, tikz}
 
-
 \graphicspath{{Res/}}
 
 \begin{document}
@@ -35,7 +34,7 @@
         \scalebox{0.5}{\input{Res/pmf.pdf_tex}}
         \vfill
         \begin{tikzpicture}[remember picture,overlay]
-            \node[anchor=north east] at (current page.north east) {
+            \node[yshift=-0.5cm,anchor=north east] at (current page.north east) {
                 \includegraphics[height=0.8\textwidth]{Res/Jokic/Jokic_ceo}
             };
         \end{tikzpicture}
@@ -45,9 +44,16 @@
         \note{test}
         .... Neke slike (i na kraju Jokić)
     \end{frame}
-    \begin{frame}{}
-        \includegraphics[height=0.4\textwidth]{Res/Jokic/Jokic_skok} \\
-        \includegraphics[height=0.4\textwidth]{Res/box}
+    \begin{frame}{Smeštanje}
+        \begin{columns}
+        \begin{column}{0.5\textwidth}
+            Testing :D
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=0.4\textheight]{Res/Jokic/Jokic_skok} \\
+            \includegraphics[height=0.3\textheight]{Res/box}
+        \end{column}
+        \end{columns}
         \note{
             Šta to Jokić može a mi ne možemo?
             Dobro, zapravo ima puno toga ali
@@ -73,9 +79,21 @@
         tako da se nalazi u kutiji
         Kretanje je kompozicija nekih pomeranja i rotacija
         ? Zasto <sub> ne moze da stane u kutiju?
+        
+        Jednoznačna transformacija koja održava rastojanje
+        se naziva izometrija
 
-        Kako funkcioniše kretanje u 3D
-        (Rotacije, Translacije, sve moguće pomoću simetrija)
+        Ako se dve vrednosti dve izometrije poklapaju u neke četiri
+        nekomplanarne tačke, onda su one jednake.
+        (Dokaz: Ako se razlikuju u tački $p$ uzmeš ravan između
+        ϕ(p), ψ(p) i početne četiri budu u toj ravni)
+        => Izometrija je kompozicija najviše četiri refleksije.
+
+        Izometrije formiraju grupu, čija su kretanja podgrupa
+        (one izometrije koje se sastoje od parnog broja refleksija)
+
+        Rotacija - ref. oko dve ravni koje se seku
+        Translacija - ref. oko dve paralelne ravni
     \end{frame}
     \begin{frame}{Smeštanje}
         Međutim Jokić može da se savija :(
@@ -96,10 +114,12 @@
     \begin{frame}{Vozovi}
         ... Neke slike vozova
         ... Slika na kojoj se vidi zašto je put različit
-
-    \end{frame}
-    \begin{frame}{Dalja razmatranja}
-        Kontrakcija dužine, dilatacija vremena...
+        \note{
+            Prvo priča o vozovima, intuitivno šta je to Ajnštajn smislio
+            Brzina svetlosti konstantna
+            Različita vremena
+            Kontrakcija dužine, dilatacija vremena...
+        }
     \end{frame}
     \begin{frame}{Cliff Hanger}
         Ako se Jokić kreće brzinom $v$ koja je blizu brzine svetlosti
@@ -112,16 +132,53 @@
     \begin{frame}{Jokiću trebaju naočare}
         Za Jokića je pak kutija doživela kontrakciju dužine,
         dakle u kutiju ne može da mu stane ni glava
+        \note{
+            Da li vam ovo deluje zanimljivo?
+            Koliko vam ovo deluje kao naučna fantastika?
+        }
     \end{frame}
     \begin{frame}
         Da li možemo da izdvojimo nešto fundamentalnije što bi nam
         pomoglo (kao matematičarima) da lakše razmatramo ovaj problem?
+        \note{
+            Crtanje grafika (s od t) po tabli (podcećanje na fiziku iz osnovne)
+            Izvođenje Lorencovih transformaciija
+            Crtanje po tabli, objašnjavanje invarijantnosti dužine u
+            Euklidskoj geometriji, izvođenje invarijantnosti
+            prostor-vremenskog intervala
+        }
     \end{frame}
-    \begin{frame}{Invarijante}
-    \end{frame}
-    \begin{frame}{Dalje zanimljivosti}
+    \begin{frame}
+        Zaboravite sve što smo radili dosada!
+        \note{
+            Zasnivanje geometrije Minkovskog na invarijantnosti
+            dužine prostor vremenskog intervala (i zašto ona nije baš
+            dužina, pravo vreme posmatrača...)
+
+            Crtež na kome se vidi da va dužina nije baš intuitivna
+            (tačke na istom 'rastojanju' od koordinatnog početka obrazuju
+            hiperbolu)
+            Ispada da su Lorencove transformacije zapravo samo
+            hiperboličke rotacije
+        }
     \end{frame}
     \begin{frame}{Rezolujcija problema}
-        slika
+        \note{
+            Kada se posmatraju događaji:
+            A - kada Jokić prolazi kroz kutiju tada se druga vrata otvore
+            B - kada Jokić izađe iz kutije tada se prva vrata zatvore
+            Kod Jokića u referentnom sistemu se oni dešavaju redosledom
+            prvo A pa onda B, dok se u referentnom sistemu kutije dešavaju
+            prvo B pa onda A (dakle Jokić je proveo neko vreme zatvoren :))
+        }
+    \end{frame}
+    \begin{frame}{Kauzalnost}
+        Kauzalnost je relacija delimičnog poretka.
+        Kauzalnost je invarijanta u odnosu na grupu Lorencovih transformacija.
+        Kauzalnost je invarijantna u odnosu na grupu svih
+        'fizički mogućih transformacija' i zato ih zovemo kauzalne
+        izometrijske transformacije
+    \end{frame}
+    \begin{frame}{Potpun poredak?}
     \end{frame}
 \end{document}
