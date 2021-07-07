@@ -8,9 +8,9 @@
 \setbeamercolor{background canvas}{bg=colorlgray}
 \setbeamercolor{normal text}{fg=colorhgray}
 
-%\usepackage{textpos}
-%\setlength{\TPHorizModule}{1cm}
-%\setlength{\TPVertModule}{1cm}
+\usepackage{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
 % for textblock
 
 \usepackage{amsmath, amsfonts, amssymb}
@@ -35,7 +35,7 @@
         \vfill
         \begin{tikzpicture}[remember picture,overlay]
             \node[yshift=-0.5cm,anchor=north east] at (current page.north east) {
-                \includegraphics[height=0.8\textwidth]{Res/Jokic/Jokic_ceo}
+                \includegraphics[height=0.8\textwidth]{Jokic/Jokic_ceo}
             };
         \end{tikzpicture}
     \end{frame}
@@ -61,8 +61,8 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
-            \includegraphics[height=0.4\textheight]{Res/Jokic/Jokic_skok} \\
-            \includegraphics[height=0.3\textheight]{Res/box}
+            \includegraphics[height=0.4\textheight]{Jokic/Jokic_skok} \\
+            \includegraphics[height=0.3\textheight]{box}
         \end{column}
         \end{columns}
         \note{
@@ -73,17 +73,22 @@
             će biti da svi mi (teoretski) imamo supermoći
         }
     \end{frame}
-    \begin{frame}{Kretanje}
-        ... iz Ideje.md
-        ? Sta znaci da neko moze da stane u kutiju?
-        Kretanjem mozemo da ga dovedemo u polozaj
-        tako da se nalazi u kutiji
-        ? Šta je to kretanje?
-        ? Zasto Jokić ne moze da stane u kutiju?
-        
+    \framepic{reflection}{
+        \frametitle{Kretanje}
         \note{
+            ? Sta znaci da neko moze da stane u kutiju?
+            Kretanjem mozemo da ga dovedemo u polozaj
+            tako da se nalazi u kutiji
+            ? Šta je to kretanje?
+            ? Zasto Jokić ne moze da stane u kutiju?
             Jednoznačna transformacija koja održava rastojanje
             se naziva izometrija
+
+            Transformacije koje očuvavaju skalarni proizvod nazivaju
+            se ortogonalne (lako se predstavljaju preko matrica)
+
+            Svaka izometrija može da se predstavi kao kompozicija
+            ortogonalne transformacije i translacije. (polarni identitet)
 
             Ako se dve vrednosti dve izometrije poklapaju u neke četiri
             nekomplanarne tačke, onda su one jednake.
@@ -99,28 +104,31 @@
             Da li neko ima ideju kako da odgovorimo na pitanje da
             li može da stane u kutiju?
         }
-    \end{frame}
+    }
+    \framecard{Međutim Jokić može da se savija :(}
     \begin{frame}{Plivanje}
-        (Jokić kako leži na vodi)
-        Međutim Jokić može da se savija :(
         $V_{Jokic} > \frac{129kg}{1000kg/m^3} = 0.129m^3$
         $V_{Kutija} = 24in \cdot 24in \cdot 12in \cdot (0.0254 m/in)^3 < 0.114m^3$
-        $V_{Jokic} > V_{Kutija}$
+        $V_{Jokic} > V_{Kutija}$ \\
         \note{
             Kako nam je poznata masa Jokića, a znamo da (kao čovek) pluta
             na vodi možemo da procenimo njegovu zapreminu i da je uporedimo
             sa zapreminom kutije
         }
+        \includegraphics[width=\textwidth]{water}
     \end{frame}
-    \begin{frame}{Vozovi}
-        \begin{columns}
-            \begin{column}{0.5\textwidth}
-                \includegraphics[height=0.4\textheight]{Res/train}
-            \end{column}
-            \begin{column}{0.5\textwidth}
-                \includegraphics[height=0.4\textheight]{Res/Jokic/Jokic_stajebreovo}
-            \end{column}
-        \end{columns}
+    \framecard{\hugetext{Šta sad?}}
+    \framepic{Jokic/Jokic_stajebreovo}{
+        \includegraphics[height=0.15\textheight]{train}
+        \begin{textblock}{2}(9,-2)
+            $ t' = t \frac 1 {\sqrt{1 - \frac {v^2} {c^2}}} $
+        \end{textblock}
+        \begin{textblock}{2}(9,2)
+            $$ E = mc^2 $$
+        \end{textblock}
+        \begin{textblock}{3}(1,3)
+            $ l' = l {\sqrt{1 - \frac {v^2} {c^2}}} $
+        \end{textblock}
         \note{
             ... Slika na kojoj se vidi zašto je put različit
             Prvo priča o vozovima, intuitivno šta je to Ajnštajn smislio
@@ -128,47 +136,58 @@
             Različita vremena
             Kontrakcija dužine, dilatacija vremena...
         }
-    \end{frame}
+    }
     \begin{frame}{Cliff Hanger}
         Ako se Jokić kreće brzinom $v$ koja je blizu brzine svetlosti
         desiće se kontrakcija njegove visine i na kratko ćemo moći da
         ga smestimo u kutiju.
-        \\ %\pause
-        Problem?
-        \\ %\pause
-        Za Jokića je pak kutija doživela kontrakciju dužine,
-        dakle u kutiju ne može da mu stane ni glava
         \note{
             Da li vam ovo deluje zanimljivo?
             Koliko vam ovo deluje kao naučna fantastika?
         }
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[anchor=south east, yshift=-5pt, xshift=-20pt] at (current page.south east) {
+                \includegraphics[height=3.0cm]{Jokic/Jokic_realy}
+            };
+        \end{tikzpicture}
     \end{frame}
-    \begin{frame}
+    \framecard{\hugetext{Problem?}}
+    \note{
+        Za Jokića je pak kutija doživela kontrakciju dužine,
+        dakle u kutiju ne može da mu stane ni glava
+    }
+    \framepic[0.3]{ruler}{
         Da li možemo da izdvojimo nešto fundamentalnije što bi nam
         pomoglo (kao matematičarima) da lakše razmatramo ovaj problem?
-        \note{
-            Crtanje grafika (s od t) po tabli (podcećanje na fiziku iz osnovne)
-            Izvođenje Lorencovih transformaciija
-            Crtanje po tabli, objašnjavanje invarijantnosti dužine u
-            Euklidskoj geometriji, izvođenje invarijantnosti
-            prostor-vremenskog intervala
-        }
-    \end{frame}
-    \begin{frame}
-        Zaboravite sve što smo radili dosada!
-        \note{
-            Zasnivanje geometrije Minkovskog na invarijantnosti
-            dužine prostor vremenskog intervala (i zašto ona nije baš
-            dužina, pravo vreme posmatrača...)
+    }
+    \note{
+        Crtanje grafika (s od t) po tabli (podcećanje na fiziku iz osnovne)
+        Izvođenje Lorencovih transformaciija
+        Crtanje po tabli, objašnjavanje invarijantnosti dužine u
+        Euklidskoj geometriji, izvođenje invarijantnosti
+        prostor-vremenskog intervala
 
-            Crtež na kome se vidi da va dužina nije baš intuitivna
-            (tačke na istom 'rastojanju' od koordinatnog početka obrazuju
-            hiperbolu)
-            Ispada da su Lorencove transformacije zapravo samo
-            hiperboličke rotacije
-        }
-    \end{frame}
-    \begin{frame}{Rezolujcija problema}
+        Zasnivanje geometrije Minkovskog na invarijantnosti
+        dužine prostor vremenskog intervala (i zašto ona nije baš
+        dužina, pravo vreme posmatrača...)
+
+        Crtež na kome se vidi da va dužina nije baš intuitivna
+        (tačke na istom 'rastojanju' od koordinatnog početka obrazuju
+        hiperbolu)
+        Ispada da su Lorencove transformacije zapravo samo
+        hiperboličke rotacije
+
+        Izometrije slikaju pravu u pravu.
+        (uzmu se prave p(e_1, e_2) i p'(ϕ(e_1), ϕ(e_2)))
+
+        Teorema o 3 događaja za ravan Lorenca i Minkovskog
+        (dokaz isti ko za euklidsku ravan)
+
+        Teorema o 4 refleksije za ravan Lorenca i Minkovskog
+        (refleksije nisu bas jednostavne kao u Euklidskoj)
+    }
+    \framepic{resenje}{
+        \frametitle{Rešenje}
         \note{
             Kada se posmatraju događaji:
             A - kada Jokić prolazi kroz kutiju tada se druga vrata otvore
@@ -177,14 +196,19 @@
             prvo A pa onda B, dok se u referentnom sistemu kutije dešavaju
             prvo B pa onda A (dakle Jokić je proveo neko vreme zatvoren :))
         }
-    \end{frame}
-    \begin{frame}{Kauzalnost}
-        Kauzalnost je relacija delimičnog poretka.
-        Kauzalnost je invarijanta u odnosu na grupu Lorencovih transformacija.
-        Kauzalnost je invarijantna u odnosu na grupu svih
-        'fizički mogućih transformacija' i zato ih zovemo kauzalne
-        izometrijske transformacije
-    \end{frame}
+    }
+    \framepic{dominoes}{
+        \frametitle{Kauzalnost}
+        \note{
+            Kauzalnost je relacija delimičnog poretka.
+            Kauzalnost je invarijanta u odnosu na grupu Lorencovih transformacija.
+            Kauzalnost je invarijantna u odnosu na grupu svih
+            'fizički mogućih transformacija' i zato ih zovemo kauzalne
+            izometrijske transformacije
+            Kako je $c$ baš veliko, ispada da su kauzlno neuslovljeni događaji
+            prostorno puno udaljeni.
+        }
+    }
     \begin{frame}{Potpun poredak?}
     \end{frame}
 \end{document}
